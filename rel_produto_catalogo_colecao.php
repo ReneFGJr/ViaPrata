@@ -13,7 +13,7 @@ if (strlen($acao) > 0)
 	{
 	$sql="select * from produto ";
 	$tit = '';
-	if (strlen($dd[0]) > 0) { $tit = $tit . 'Codigo '.$dd[0].' '; $wh = $wh . wand($wh). "(p_codigo like '".codean($dd[0])."%') "; }
+	if (strlen($dd[0]) > 0) { $tit = $tit . 'Codigo '.$dd[0].' '; $wh = $wh . wand($wh). "(p_codigo like '%".codean($dd[0])."%') "; }
 	if (strlen($dd[1]) > 0) { $tit = $tit . 'Descrição '.$dd[1]; $wh = $wh . wand($wh).  "((upper(asc7(p_descricao)) like '%".strtoupper($dd[1])."%') or (((p_obs)) like '%".strtoupper($dd[1])."%')) "; }
 	if (strlen($dd[2]) > 0) { $tit = $tit . 'peso de '.$dd[2]; $wh = $wh . wand($wh).  "(p_peso >= ".$dd[2].") "; }
 	if (strlen($dd[3]) > 0) { $tit = $tit . ' ate '.$dd[3]; $wh = $wh . wand($wh).  "(p_peso <= ".$dd[3].") "; }
@@ -31,7 +31,7 @@ if (strlen($acao) > 0)
 	if ($dd[7] == '4') { $sql = $sql . "order by p_fornecedor"; }
 	if ($dd[7] == '5') { $sql = $sql . "order by p_codigo"; }
 	$rlt = db_query($sql);
-
+	
 	echo '<font class="lt5">Produtos cadastrado</font><BR>';
 	echo '<font class="lt2">'.$tit.'</font>';
 	echo '<TABLE width="'.$tab_max.'" class="lt1" border1=1>';
@@ -80,7 +80,7 @@ if (strlen($acao) > 0)
 			}
 		$tt = $tt . '</table>';
 		echo '<TABLE width="'.$tab_max.'" class="lt1" border1=1>';
-		echo '<TR><TD><form method="post" action="rel_produto_catalogo.php"></TD></TR>';
+		echo '<TR><TD><form method="post" action="rel_produto_catalogo_colecao.php"></TD></TR>';
 		echo $tt;
 		echo '<TR><TD><input type="submit" name="acao" value="buscar"></TD></TR>';
 		echo '<TR><TD></form></TD></TR>';

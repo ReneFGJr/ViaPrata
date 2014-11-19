@@ -15,7 +15,7 @@ if ($user_nivel == 9)
 	$masc = array('','','','','');
 	$busca = true;
 	$offset = 200;
-	$pre_where = " (vd_ativo = 1) ";
+	$pre_where = " (vd_ativo = 2) ";
 	$order  = "vd_nome ";
 	require('include/sisdoc_row.php');	
 	

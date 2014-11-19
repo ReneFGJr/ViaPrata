@@ -6,6 +6,9 @@ require("include/viaprata_funcoes.php");
 require("include/sisdoc_data.php");
 require("include/sisdoc_colunas.php");
 
+require("_class/_class_produto.php");
+$prod = new produto;
+
 if (strlen($acao) > 0)
 	{
 	$sql="select * from produto ";
@@ -41,20 +44,21 @@ if (strlen($acao) > 0)
 			$col = 0;
 			}
 		echo '<TD>';
+		echo $prod->mostra_imagem($line);
 		$col = $col + 1;
-		$img = trim($line['p_codigo']);
-		$codigo = trim($line['p_codigo']);
-		$codfor = trim($line['p_fornecedor_codigo']);
-		$descricao = trim($line['p_descricao']);
-		$preco = trim($line['p_preco_sugerido']);
-		$custo = trim($line['p_preco']);
-		$custo = trim($line['p_peso']);
-		$link = '<A HREF="produto_edit.php?dd0='.$line['id_p'].'" target="editar">';
-		echo '<IMG SRC="/img/produto/'.$img.'_01.jpg" width="281">';
-		echo '<BR>'.$link.'<font class=lt2>Cod. '.$codigo.' '.$codfor.'</font></A>';
-		echo '<BR><B>'.$descricao.'</B>';
-		echo '<BR><B>(R$ '.number_format($preco,2).')</B>&nbsp;&nbsp;(R$ '.number_format($custo,2).')&nbsp;&nbsp;('.number_format($peso,2).'g)';;
-		
+		//$img = trim($line['p_codigo']);
+		//$codigo = trim($line['p_codigo']);
+		//$codfor = trim($line['p_fornecedor_codigo']);
+		//$descricao = trim($line['p_descricao']);
+		//$preco = trim($line['p_preco_sugerido']);
+		//$custo = trim($line['p_preco']);
+		//$peso = trim($line['p_peso']);
+		//$link = '<A HREF="produto_edit.php?dd0='.$line['id_p'].'" target="editar">';
+		//echo '<IMG SRC="/img/produto/'.$img.'_01.jpg" width="281">';
+		//echo '<BR>'.$link.'<font class=lt2>Cod. '.$codigo.' '.$codfor.'</font></A>';
+		//echo '<BR><B>'.$descricao.'</B>';
+		//echo '<BR><B>(R$ '.number_format($preco,2).')</B>&nbsp;&nbsp;(R$ '.number_format($custo,2).')&nbsp;&nbsp;('.number_format($peso,2).'g)';;
+		//echo '<BR><font class="lt0">Atualizado em: '.stodbr($line['p_lastupdate']).'</font>';
 		}
 	echo '</TABLE>';
 	} else {
