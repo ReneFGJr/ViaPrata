@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content="DeZign for Databases - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>DeZign for Databases V4 - HTML Report</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dezign.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">Physical model</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Tables</a></li>
+<li><a href="attrl.html">Columns</a></li>
+<li><a href="rell.html">Relationships</a></li>
+<li><a href="doml.html">Domains</a></li>
+<li><a href="viewl.html">Views</a></li>
+<li><a href="procl.html">Procedures</a></li>
+<li><a href="seql.html">Sequences</a></li>
+</ul>
+<div class="row">
+<div class="activetab">List of tables</div>
+<div class="tab"><a href="entd.html">Table details</a></div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="right" valign=top>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Entity name</td><td class="fieldname">Primary key constraint</td><td class="fieldname">Primary key columns</td><td class="fieldname"># Columns</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#acoes">acoes</A></td><td class="fielddata">pk_acoes</td><td class="fielddata">objid_acao</td><td class="fielddata">3</td><td class="fielddata">Todas ações possíveis no sistema.</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#bancos">bancos</A></td><td class="fielddata">pk_bancos</td><td class="fielddata">objid_banco</td><td class="fielddata">7</td><td class="fielddata">Bancos utilizados para cadastrar cheques</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#blocos_pedidos">blocos_pedidos</A></td><td class="fielddata">pk_blocos_pedidos</td><td class="fielddata">objid_bloco_pedido</td><td class="fielddata">9</td><td class="fielddata">Blocos de Pedidos enviados a um vendedor</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#cheques">cheques</A></td><td class="fielddata">pk_cheques</td><td class="fielddata">objid_cheque</td><td class="fielddata">20</td><td class="fielddata">Relação de todos os cheques oriundos de vendas.</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#cidades_atuacao">cidades_atuacao</A></td><td class="fielddata">pk_cidades_atuacao</td><td class="fielddata">objid_cidade_atuacao</td><td class="fielddata">10</td><td class="fielddata">Cidades nas quais um determinado vendedor atua</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#clientes">clientes</A></td><td class="fielddata">pk_clientes</td><td class="fielddata">objid_cliente</td><td class="fielddata">29</td><td class="fielddata">Tabela com todos os clientes</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#comissoes">comissoes</A></td><td class="fielddata">pk_comissoes</td><td class="fielddata">objid_comissao</td><td class="fielddata">10</td><td class="fielddata">Registro de todas as comissões geradas por vendas</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#contatos">contatos</A></td><td class="fielddata">pk_contatos</td><td class="fielddata">objid_contato</td><td class="fielddata">8</td><td class="fielddata">Dados dos contatos de um cliente, fornecedor ou vendedor</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#conta_corrente">conta_corrente</A></td><td class="fielddata">pk_conta_corrente</td><td class="fielddata">objid_conta_corrente</td><td class="fielddata">5</td><td class="fielddata">Tabela de link para obter dados sobre a movimentação na conta corrente do cliente ou vendedor ou fornecedor.</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#cotacoes_moeda">cotacoes_moeda</A></td><td class="fielddata">pk_cotacoes_moeda</td><td class="fielddata">objid_cotacao_moeda</td><td class="fielddata">7</td><td class="fielddata">Todas as cotações de uma determinada moeda</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#custos">custos</A></td><td class="fielddata">pk_custos</td><td class="fielddata">objid_custo</td><td class="fielddata">7</td><td class="fielddata">Descrição de todos os custos para formar um preço de venda.</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#custos_produto">custos_produto</A></td><td class="fielddata">pk_custos_produto</td><td class="fielddata">objid_custo_produto</td><td class="fielddata">8</td><td class="fielddata">Todos os custos que estão envolvidos na formação do preço de venda de um determinado produto</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#edicoes_feira">edicoes_feira</A></td><td class="fielddata">pk_edicoes_feira</td><td class="fielddata">objid_edicao_feira</td><td class="fielddata">12</td><td class="fielddata">Todas as edições que a empresa participou de determinada feira</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#estoques">estoques</A></td><td class="fielddata">pk_estoques</td><td class="fielddata">objid_estoque</td><td class="fielddata">4</td><td class="fielddata">Todos os estoques controlados pela empresa (vendedores, filiais, lojas, sedex e etc)</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#feiras">feiras</A></td><td class="fielddata">pk_feiras</td><td class="fielddata">objid_feira</td><td class="fielddata">7</td><td class="fielddata">Todas as feiras das quais a empresa participa</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#fornecedores">fornecedores</A></td><td class="fielddata">pk_fornecedores</td><td class="fielddata">objid_fornecedor</td><td class="fielddata">22</td><td class="fielddata">Todos os fornecedores, pessoa física ou jurídica, da empresa</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#fotos_produto">fotos_produto</A></td><td class="fielddata">pk_fotos_produto</td><td class="fielddata">objid_foto_produto</td><td class="fielddata">7</td><td class="fielddata">Arquivo com todas as fotos de um determinado produto</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#hist_precos_produto">hist_precos_produto</A></td><td class="fielddata">pk_hist_precos_produto</td><td class="fielddata">objid_hist_preco</td><td class="fielddata">7</td><td class="fielddata">Histórico com todas as alterações de preços em um determinado produto</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#itens_comissao">itens_comissao</A></td><td class="fielddata">pk_itens_comissao</td><td class="fielddata">objid_item_comissao</td><td class="fielddata">12</td><td class="fielddata">Detalhamento de todos os produtos vendidos por um vendedor e suas respectivas comissões</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#itens_devolucao">itens_devolucao</A></td><td class="fielddata">pk_itens_devolucao</td><td class="fielddata">objid_item_devolucao</td><td class="fielddata">9</td><td class="fielddata">Itens devolvidos em uma determinada venda.</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#itens_venda">itens_venda</A></td><td class="fielddata">pk_itens_venda</td><td class="fielddata">objid_item_venda</td><td class="fielddata">10</td><td class="fielddata">Relação de todos os produtos adquiridos na venda para o cliente. </td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#moedas">moedas</A></td><td class="fielddata">pk_moedas</td><td class="fielddata">objid_moeda</td><td class="fielddata">8</td><td class="fielddata">Moedas utilizadas no sistema</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#movimento_conta_corrente">movimento_conta_corrente</A></td><td class="fielddata">pk_movimento_conta_corrente</td><td class="fielddata">objid_movimento_conta_corrente</td><td class="fielddata">9</td><td class="fielddata">Descreve o lançamento que foi apontado na conta corrente. Pode ser um Crédito ou Débito e o valor deste lançamento inflencia no saldo da conta corrente em questão</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#movimento_estoque">movimento_estoque</A></td><td class="fielddata">pk_movimento_estoque</td><td class="fielddata">objid_movimento_estoque</td><td class="fielddata">11</td><td class="fielddata">Todas as movimentações realizadas em um determinado estoque. Saídas, Entradas, Transferências, Devoluções e etc</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#parametros">parametros</A></td><td class="fielddata">pk_parametros</td><td class="fielddata">objid_parametro</td><td class="fielddata">7</td><td class="fielddata">Tabela de parâmetros utilizados no sistema</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#perfis_acesso">perfis_acesso</A></td><td class="fielddata">pk_perfis_acesso</td><td class="fielddata">objid_perfil</td><td class="fielddata">6</td><td class="fielddata">Perfis permitidos de acesso</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#perfis_acoes">perfis_acoes</A></td><td class="fielddata">pk_perfis_acoes</td><td class="fielddata">objid_perfil_acao</td><td class="fielddata">7</td><td class="fielddata">Ações permitidos para determinado perfil</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#produtos">produtos</A></td><td class="fielddata">pk_produtos</td><td class="fielddata">objid_produto</td><td class="fielddata">18</td><td class="fielddata">Produtos da empresa. </td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#prorrogacoes_cheque">prorrogacoes_cheque</A></td><td class="fielddata">pk_prorrogacoes_cheque</td><td class="fielddata">objid_prorrogacao</td><td class="fielddata">6</td><td class="fielddata">Histórico com todas as prorrogações solicitadas para um determinado cheque</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#saldo_conta_corrente">saldo_conta_corrente</A></td><td class="fielddata">pk_saldo_conta_corrente</td><td class="fielddata">objid_saldo_conta_corrente</td><td class="fielddata">4</td><td class="fielddata">Saldo de uma determinada conta corrente por moeda</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#snoopy_log">snoopy_log</A></td><td class="fielddata">pk_snoopy_log</td><td class="fielddata">objid_snoopy_log</td><td class="fielddata">7</td><td class="fielddata">Tabela com todas as alterações realizadas no sistema</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#status_cheque">status_cheque</A></td><td class="fielddata">pk_status_cheque</td><td class="fielddata">objid_status_cheque</td><td class="fielddata">2</td><td class="fielddata">Possíveis status para um cheque desde PENDENTE a BAIXADO</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#tipos_estoque">tipos_estoque</A></td><td class="fielddata">pk_tipos_estoque</td><td class="fielddata">objid_tipo_estoque</td><td class="fielddata">6</td><td class="fielddata">Tipos disponíveis de estoque (estoque Vendedor, estoque Loja, estoque Filial, estoque Sedex e etc)</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#tipo_movimento">tipo_movimento</A></td><td class="fielddata">pk_tipo_movimento</td><td class="fielddata">objid_tipo_movimento</td><td class="fielddata">7</td><td class="fielddata">Tipo do movimento do estoque. Ações que identificam o motivo da movimentação bem como se é uma movimentação de entrada ou saída para o estoque.</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#usuarios">usuarios</A></td><td class="fielddata">pk_usuarios</td><td class="fielddata">objid_usuario</td><td class="fielddata">10</td><td class="fielddata">Usuários com acesso ao sistema</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#vendas">vendas</A></td><td class="fielddata">pk_vendas</td><td class="fielddata">objid_venda</td><td class="fielddata">14</td><td class="fielddata">Relação com todas as vendas realizadas. O valor total da venda e o desconto serão apresentados na moeda que é a PADRÃO do sistema no momento do cadastro da venda.</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#vendedores">vendedores</A></td><td class="fielddata">pk_vendedores</td><td class="fielddata">objid_vendedor</td><td class="fielddata">22</td><td class="fielddata">Todos os vendedores, pessoa física ou jurídica, da empresa</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

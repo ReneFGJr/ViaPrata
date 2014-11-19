@@ -1,0 +1,1481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content="DeZign for Databases - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>DeZign for Databases V4 - HTML Report</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dezign.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">Physical model</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Tables</a></li>
+<li><a href="attrl.html">Columns</a></li>
+<li><a href="rell.html">Relationships</a></li>
+<li><a href="doml.html">Domains</a></li>
+<li><a href="viewl.html">Views</a></li>
+<li><a href="procl.html">Procedures</a></li>
+<li><a href="seql.html">Sequences</a></li>
+</ul>
+<div class="row">
+<div class="tab"><a href="rell.html">List of relationships</a></div>
+<div class="activetab">Relationship details</div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="left" valign=top>
+<ul id="objectbrowser">
+<li><a href="#acoes_perfis_acoes">acoes_perfis_acoes</a></li>
+<li><a href="#bancos_cheques">bancos_cheques</a></li>
+<li><a href="#cheques_prorrogacoes_cheque">cheques_prorrogacoes_cheque</a></li>
+<li><a href="#clientes_cheques">clientes_cheques</a></li>
+<li><a href="#clientes_contatos">clientes_contatos</a></li>
+<li><a href="#clientes_vendas">clientes_vendas</a></li>
+<li><a href="#comissoes_itens_comissao">comissoes_itens_comissao</a></li>
+<li><a href="#conta_corrente_clientes">conta_corrente_clientes</a></li>
+<li><a href="#conta_corrente_fornecedores">conta_corrente_fornecedores</a></li>
+<li><a href="#conta_corrente_mov_cc">conta_corrente_mov_cc</a></li>
+<li><a href="#conta_corrente_saldo_cc">conta_corrente_saldo_cc</a></li>
+<li><a href="#conta_corrente_vendedores">conta_corrente_vendedores</a></li>
+<li><a href="#custos_custos_produto">custos_custos_produto</a></li>
+<li><a href="#estoques_movimento_estoque">estoques_movimento_estoque</a></li>
+<li><a href="#estoques_vendas">estoques_vendas</a></li>
+<li><a href="#feiras_edicoes_feira">feiras_edicoes_feira</a></li>
+<li><a href="#feiras_vendas">feiras_vendas</a></li>
+<li><a href="#fornecedores_contatos">fornecedores_contatos</a></li>
+<li><a href="#fornecedores_produtos">fornecedores_produtos</a></li>
+<li><a href="#moedas_cheques">moedas_cheques</a></li>
+<li><a href="#moedas_clientes">moedas_clientes</a></li>
+<li><a href="#moedas_clientes2">moedas_clientes2</a></li>
+<li><a href="#moedas_cotacoes_moeda">moedas_cotacoes_moeda</a></li>
+<li><a href="#moedas_custos">moedas_custos</a></li>
+<li><a href="#moedas_itens_devolucao">moedas_itens_devolucao</a></li>
+<li><a href="#moedas_itens_devolucao2">moedas_itens_devolucao2</a></li>
+<li><a href="#moedas_itens_venda">moedas_itens_venda</a></li>
+<li><a href="#moedas_itens_venda2">moedas_itens_venda2</a></li>
+<li><a href="#moedas_movimento_conta_corrente">moedas_movimento_conta_corrente</a></li>
+<li><a href="#moedas_movimento_estoque">moedas_movimento_estoque</a></li>
+<li><a href="#moedas_produtos">moedas_produtos</a></li>
+<li><a href="#moedas_saldo_conta_corrente">moedas_saldo_conta_corrente</a></li>
+<li><a href="#moedas_vendas">moedas_vendas</a></li>
+<li><a href="#perfis_acesso_perfis_acoes">perfis_acesso_perfis_acoes</a></li>
+<li><a href="#perfis_acesso_usuarios">perfis_acesso_usuarios</a></li>
+<li><a href="#produtos_comissoes">produtos_comissoes</a></li>
+<li><a href="#produtos_custos_produto">produtos_custos_produto</a></li>
+<li><a href="#produtos_fotos_produto">produtos_fotos_produto</a></li>
+<li><a href="#produtos_hist_precos_produto">produtos_hist_precos_produto</a></li>
+<li><a href="#produtos_itens_comissao">produtos_itens_comissao</a></li>
+<li><a href="#produtos_itens_devolucao">produtos_itens_devolucao</a></li>
+<li><a href="#produtos_itens_devolucao2">produtos_itens_devolucao2</a></li>
+<li><a href="#produtos_itens_venda">produtos_itens_venda</a></li>
+<li><a href="#produtos_itens_venda2">produtos_itens_venda2</a></li>
+<li><a href="#produtos_movimento_estoque">produtos_movimento_estoque</a></li>
+<li><a href="#produtos_produtos">produtos_produtos</a></li>
+<li><a href="#status_cheque_cheques">status_cheque_cheques</a></li>
+<li><a href="#tipos_estoque_estoques">tipos_estoque_estoques</a></li>
+<li><a href="#tipo_movimento_estoque">tipo_movimento_estoque</a></li>
+<li><a href="#usuarios_bancos">usuarios_bancos</a></li>
+<li><a href="#usuarios_bancos2">usuarios_bancos2</a></li>
+<li><a href="#usuarios_cheques">usuarios_cheques</a></li>
+<li><a href="#usuarios_cheques2">usuarios_cheques2</a></li>
+<li><a href="#usuarios_clientes">usuarios_clientes</a></li>
+<li><a href="#usuarios_clientes2">usuarios_clientes2</a></li>
+<li><a href="#usuarios_comissoes">usuarios_comissoes</a></li>
+<li><a href="#usuarios_comissoes2">usuarios_comissoes2</a></li>
+<li><a href="#usuarios_conta_corrente">usuarios_conta_corrente</a></li>
+<li><a href="#usuarios_conta_corrente2">usuarios_conta_corrente2</a></li>
+<li><a href="#usuarios_cotacoes_moeda">usuarios_cotacoes_moeda</a></li>
+<li><a href="#usuarios_custos">usuarios_custos</a></li>
+<li><a href="#usuarios_custos2">usuarios_custos2</a></li>
+<li><a href="#usuarios_custos_produto">usuarios_custos_produto</a></li>
+<li><a href="#usuarios_custos_produto2">usuarios_custos_produto2</a></li>
+<li><a href="#usuarios_edicoes_feira">usuarios_edicoes_feira</a></li>
+<li><a href="#usuarios_edicoes_feira2">usuarios_edicoes_feira2</a></li>
+<li><a href="#usuarios_estoques">usuarios_estoques</a></li>
+<li><a href="#usuarios_feiras">usuarios_feiras</a></li>
+<li><a href="#usuarios_feiras2">usuarios_feiras2</a></li>
+<li><a href="#usuarios_fornecedores">usuarios_fornecedores</a></li>
+<li><a href="#usuarios_fornecedores2">usuarios_fornecedores2</a></li>
+<li><a href="#usuarios_fotos_produto">usuarios_fotos_produto</a></li>
+<li><a href="#usuarios_fotos_produto2">usuarios_fotos_produto2</a></li>
+<li><a href="#usuarios_hist_precos_produto">usuarios_hist_precos_produto</a></li>
+<li><a href="#usuarios_itens_comissao">usuarios_itens_comissao</a></li>
+<li><a href="#usuarios_itens_comissao2">usuarios_itens_comissao2</a></li>
+<li><a href="#usuarios_moedas">usuarios_moedas</a></li>
+<li><a href="#usuarios_moedas2">usuarios_moedas2</a></li>
+<li><a href="#usuarios_movimento_estoque">usuarios_movimento_estoque</a></li>
+<li><a href="#usuarios_mov_conta_corrente">usuarios_mov_conta_corrente</a></li>
+<li><a href="#usuarios_parametros">usuarios_parametros</a></li>
+<li><a href="#usuarios_parametros2">usuarios_parametros2</a></li>
+<li><a href="#usuarios_perfis_acesso">usuarios_perfis_acesso</a></li>
+<li><a href="#usuarios_perfis_acesso2">usuarios_perfis_acesso2</a></li>
+<li><a href="#usuarios_perfis_acoes">usuarios_perfis_acoes</a></li>
+<li><a href="#usuarios_perfis_acoes2">usuarios_perfis_acoes2</a></li>
+<li><a href="#usuarios_produtos">usuarios_produtos</a></li>
+<li><a href="#usuarios_produtos2">usuarios_produtos2</a></li>
+<li><a href="#usuarios_prorrogacoes_cheque">usuarios_prorrogacoes_cheque</a></li>
+<li><a href="#usuarios_snoopy_log">usuarios_snoopy_log</a></li>
+<li><a href="#usuarios_tipos_estoque">usuarios_tipos_estoque</a></li>
+<li><a href="#usuarios_tipos_estoque2">usuarios_tipos_estoque2</a></li>
+<li><a href="#usuarios_tipo_movimento">usuarios_tipo_movimento</a></li>
+<li><a href="#usuarios_tipo_movimento2">usuarios_tipo_movimento2</a></li>
+<li><a href="#usuarios_usuarios">usuarios_usuarios</a></li>
+<li><a href="#usuarios_usuarios2">usuarios_usuarios2</a></li>
+<li><a href="#usuarios_vendas">usuarios_vendas</a></li>
+<li><a href="#usuarios_vendas2">usuarios_vendas2</a></li>
+<li><a href="#usuarios_vendedores">usuarios_vendedores</a></li>
+<li><a href="#usuarios_vendedores2">usuarios_vendedores2</a></li>
+<li><a href="#vendas_cheques">vendas_cheques</a></li>
+<li><a href="#vendas_comissoes">vendas_comissoes</a></li>
+<li><a href="#vendas_itens_devolucao">vendas_itens_devolucao</a></li>
+<li><a href="#vendas_itens_venda">vendas_itens_venda</a></li>
+<li><a href="#vendedores_blocos_pedidos">vendedores_blocos_pedidos</a></li>
+<li><a href="#vendedores_cheques">vendedores_cheques</a></li>
+<li><a href="#vendedores_cidades_atuacao">vendedores_cidades_atuacao</a></li>
+<li><a href="#vendedores_clientes">vendedores_clientes</a></li>
+<li><a href="#vendedores_comissoes">vendedores_comissoes</a></li>
+<li><a href="#vendedores_contatos">vendedores_contatos</a></li>
+<li><a href="#vendedores_vendas">vendedores_vendas</a></li>
+</ul>
+</td>
+<td class="right" valign=top>
+<A NAME="acoes_perfis_acoes"></A>
+<div class="objectname">Relationship: acoes_perfis_acoes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">acoes (objid_acao)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">perfis_acoes (objid_acao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="bancos_cheques"></A>
+<div class="objectname">Relationship: bancos_cheques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">bancos (objid_banco)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cheques (objid_banco)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="cheques_prorrogacoes_cheque"></A>
+<div class="objectname">Relationship: cheques_prorrogacoes_cheque</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">cheques (objid_cheque)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">prorrogacoes_cheque (objid_cheque)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="clientes_cheques"></A>
+<div class="objectname">Relationship: clientes_cheques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">clientes (objid_cliente)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cheques (objid_cliente)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="clientes_contatos"></A>
+<div class="objectname">Relationship: clientes_contatos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">clientes (objid_cliente)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">contatos (objid_cliente)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="clientes_vendas"></A>
+<div class="objectname">Relationship: clientes_vendas</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">clientes (objid_cliente)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendas (objid_cliente)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="comissoes_itens_comissao"></A>
+<div class="objectname">Relationship: comissoes_itens_comissao</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">comissoes (objid_comissao)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_comissao (objid_comissao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="conta_corrente_clientes"></A>
+<div class="objectname">Relationship: conta_corrente_clientes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">conta_corrente (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">clientes (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="conta_corrente_fornecedores"></A>
+<div class="objectname">Relationship: conta_corrente_fornecedores</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">conta_corrente (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">fornecedores (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="conta_corrente_mov_cc"></A>
+<div class="objectname">Relationship: conta_corrente_mov_cc</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">conta_corrente (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">movimento_conta_corrente (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="conta_corrente_saldo_cc"></A>
+<div class="objectname">Relationship: conta_corrente_saldo_cc</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">conta_corrente (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">saldo_conta_corrente (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="conta_corrente_vendedores"></A>
+<div class="objectname">Relationship: conta_corrente_vendedores</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">conta_corrente (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendedores (objid_conta_corrente)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="custos_custos_produto"></A>
+<div class="objectname">Relationship: custos_custos_produto</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">custos (objid_custo)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">custos_produto (objid_custo)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="estoques_movimento_estoque"></A>
+<div class="objectname">Relationship: estoques_movimento_estoque</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">estoques (objid_estoque)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">movimento_estoque (objid_estoque)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="estoques_vendas"></A>
+<div class="objectname">Relationship: estoques_vendas</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">estoques (objid_estoque)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendas (objid_estoque)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="feiras_edicoes_feira"></A>
+<div class="objectname">Relationship: feiras_edicoes_feira</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">feiras (objid_feira)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">edicoes_feira (objid_feira)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="feiras_vendas"></A>
+<div class="objectname">Relationship: feiras_vendas</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">feiras (objid_feira)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendas (objid_feira)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="fornecedores_contatos"></A>
+<div class="objectname">Relationship: fornecedores_contatos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">fornecedores (objid_fornecedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">contatos (objid_fornecedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="fornecedores_produtos"></A>
+<div class="objectname">Relationship: fornecedores_produtos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">fornecedores (objid_fornecedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">produtos (objid_fornecedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_cheques"></A>
+<div class="objectname">Relationship: moedas_cheques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cheques (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_clientes"></A>
+<div class="objectname">Relationship: moedas_clientes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">clientes (objid_moeda_limite)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_clientes2"></A>
+<div class="objectname">Relationship: moedas_clientes2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">clientes (objid_moeda_potencial)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_cotacoes_moeda"></A>
+<div class="objectname">Relationship: moedas_cotacoes_moeda</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cotacoes_moeda (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_custos"></A>
+<div class="objectname">Relationship: moedas_custos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">custos (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_itens_devolucao"></A>
+<div class="objectname">Relationship: moedas_itens_devolucao</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_devolucao (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_itens_devolucao2"></A>
+<div class="objectname">Relationship: moedas_itens_devolucao2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_devolucao (objid_moeda_padrao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_itens_venda"></A>
+<div class="objectname">Relationship: moedas_itens_venda</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_venda (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_itens_venda2"></A>
+<div class="objectname">Relationship: moedas_itens_venda2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_venda (objid_moeda_padrao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_movimento_conta_corrente"></A>
+<div class="objectname">Relationship: moedas_movimento_conta_corrente</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">movimento_conta_corrente (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_movimento_estoque"></A>
+<div class="objectname">Relationship: moedas_movimento_estoque</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">movimento_estoque (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_produtos"></A>
+<div class="objectname">Relationship: moedas_produtos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">produtos (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_saldo_conta_corrente"></A>
+<div class="objectname">Relationship: moedas_saldo_conta_corrente</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">saldo_conta_corrente (objid_moeda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="moedas_vendas"></A>
+<div class="objectname">Relationship: moedas_vendas</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">moedas (objid_moeda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendas (objid_moeda_padrao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="perfis_acesso_perfis_acoes"></A>
+<div class="objectname">Relationship: perfis_acesso_perfis_acoes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">perfis_acesso (objid_perfil)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">perfis_acoes (objid_perfil)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="perfis_acesso_usuarios"></A>
+<div class="objectname">Relationship: perfis_acesso_usuarios</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">perfis_acesso (objid_perfil)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">usuarios (objid_perfil)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_comissoes"></A>
+<div class="objectname">Relationship: produtos_comissoes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">comissoes (objid_produto_pai)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_custos_produto"></A>
+<div class="objectname">Relationship: produtos_custos_produto</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">custos_produto (objid_produto)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_fotos_produto"></A>
+<div class="objectname">Relationship: produtos_fotos_produto</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">fotos_produto (objid_produto)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_hist_precos_produto"></A>
+<div class="objectname">Relationship: produtos_hist_precos_produto</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">hist_precos_produto (objid_produto)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_itens_comissao"></A>
+<div class="objectname">Relationship: produtos_itens_comissao</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_comissao (objid_produto_pai)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_itens_devolucao"></A>
+<div class="objectname">Relationship: produtos_itens_devolucao</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_devolucao (objid_produto)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_itens_devolucao2"></A>
+<div class="objectname">Relationship: produtos_itens_devolucao2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_devolucao (objid_produto_pai)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_itens_venda"></A>
+<div class="objectname">Relationship: produtos_itens_venda</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_venda (objid_produto)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_itens_venda2"></A>
+<div class="objectname">Relationship: produtos_itens_venda2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_venda (objid_produto_pai)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_movimento_estoque"></A>
+<div class="objectname">Relationship: produtos_movimento_estoque</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">movimento_estoque (objid_produto_pai)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="produtos_produtos"></A>
+<div class="objectname">Relationship: produtos_produtos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">produtos (objid_produto)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">produtos (objid_produto_pai)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="status_cheque_cheques"></A>
+<div class="objectname">Relationship: status_cheque_cheques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">status_cheque (objid_status_cheque)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cheques (objid_status_cheque)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="tipos_estoque_estoques"></A>
+<div class="objectname">Relationship: tipos_estoque_estoques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">tipos_estoque (objid_tipo_estoque)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">estoques (objid_tipo_estoque)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="tipo_movimento_estoque"></A>
+<div class="objectname">Relationship: tipo_movimento_estoque</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">tipo_movimento (objid_tipo_movimento)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">movimento_estoque (objid_tipo_movimento)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_bancos"></A>
+<div class="objectname">Relationship: usuarios_bancos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">bancos (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_bancos2"></A>
+<div class="objectname">Relationship: usuarios_bancos2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">bancos (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_cheques"></A>
+<div class="objectname">Relationship: usuarios_cheques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cheques (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_cheques2"></A>
+<div class="objectname">Relationship: usuarios_cheques2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cheques (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_clientes"></A>
+<div class="objectname">Relationship: usuarios_clientes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">clientes (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_clientes2"></A>
+<div class="objectname">Relationship: usuarios_clientes2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">clientes (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_comissoes"></A>
+<div class="objectname">Relationship: usuarios_comissoes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">comissoes (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_comissoes2"></A>
+<div class="objectname">Relationship: usuarios_comissoes2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">comissoes (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_conta_corrente"></A>
+<div class="objectname">Relationship: usuarios_conta_corrente</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">conta_corrente (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_conta_corrente2"></A>
+<div class="objectname">Relationship: usuarios_conta_corrente2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">conta_corrente (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_cotacoes_moeda"></A>
+<div class="objectname">Relationship: usuarios_cotacoes_moeda</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cotacoes_moeda (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_custos"></A>
+<div class="objectname">Relationship: usuarios_custos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">custos (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_custos2"></A>
+<div class="objectname">Relationship: usuarios_custos2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">custos (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_custos_produto"></A>
+<div class="objectname">Relationship: usuarios_custos_produto</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">custos_produto (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_custos_produto2"></A>
+<div class="objectname">Relationship: usuarios_custos_produto2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">custos_produto (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_edicoes_feira"></A>
+<div class="objectname">Relationship: usuarios_edicoes_feira</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">edicoes_feira (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_edicoes_feira2"></A>
+<div class="objectname">Relationship: usuarios_edicoes_feira2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">edicoes_feira (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_estoques"></A>
+<div class="objectname">Relationship: usuarios_estoques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">estoques (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_feiras"></A>
+<div class="objectname">Relationship: usuarios_feiras</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">feiras (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_feiras2"></A>
+<div class="objectname">Relationship: usuarios_feiras2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">feiras (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_fornecedores"></A>
+<div class="objectname">Relationship: usuarios_fornecedores</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">fornecedores (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_fornecedores2"></A>
+<div class="objectname">Relationship: usuarios_fornecedores2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">fornecedores (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_fotos_produto"></A>
+<div class="objectname">Relationship: usuarios_fotos_produto</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">fotos_produto (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_fotos_produto2"></A>
+<div class="objectname">Relationship: usuarios_fotos_produto2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">fotos_produto (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_hist_precos_produto"></A>
+<div class="objectname">Relationship: usuarios_hist_precos_produto</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">hist_precos_produto (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_itens_comissao"></A>
+<div class="objectname">Relationship: usuarios_itens_comissao</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_comissao (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_itens_comissao2"></A>
+<div class="objectname">Relationship: usuarios_itens_comissao2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_comissao (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_moedas"></A>
+<div class="objectname">Relationship: usuarios_moedas</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">moedas (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_moedas2"></A>
+<div class="objectname">Relationship: usuarios_moedas2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">moedas (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_movimento_estoque"></A>
+<div class="objectname">Relationship: usuarios_movimento_estoque</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">movimento_estoque (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_mov_conta_corrente"></A>
+<div class="objectname">Relationship: usuarios_mov_conta_corrente</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">movimento_conta_corrente (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_parametros"></A>
+<div class="objectname">Relationship: usuarios_parametros</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">parametros (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_parametros2"></A>
+<div class="objectname">Relationship: usuarios_parametros2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">parametros (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_perfis_acesso"></A>
+<div class="objectname">Relationship: usuarios_perfis_acesso</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">perfis_acesso (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_perfis_acesso2"></A>
+<div class="objectname">Relationship: usuarios_perfis_acesso2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">perfis_acesso (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_perfis_acoes"></A>
+<div class="objectname">Relationship: usuarios_perfis_acoes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">perfis_acoes (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_perfis_acoes2"></A>
+<div class="objectname">Relationship: usuarios_perfis_acoes2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">perfis_acoes (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_produtos"></A>
+<div class="objectname">Relationship: usuarios_produtos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">produtos (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_produtos2"></A>
+<div class="objectname">Relationship: usuarios_produtos2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">produtos (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_prorrogacoes_cheque"></A>
+<div class="objectname">Relationship: usuarios_prorrogacoes_cheque</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">prorrogacoes_cheque (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_snoopy_log"></A>
+<div class="objectname">Relationship: usuarios_snoopy_log</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">snoopy_log (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_tipos_estoque"></A>
+<div class="objectname">Relationship: usuarios_tipos_estoque</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">tipos_estoque (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_tipos_estoque2"></A>
+<div class="objectname">Relationship: usuarios_tipos_estoque2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">tipos_estoque (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_tipo_movimento"></A>
+<div class="objectname">Relationship: usuarios_tipo_movimento</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">tipo_movimento (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_tipo_movimento2"></A>
+<div class="objectname">Relationship: usuarios_tipo_movimento2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">tipo_movimento (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_usuarios"></A>
+<div class="objectname">Relationship: usuarios_usuarios</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">usuarios (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_usuarios2"></A>
+<div class="objectname">Relationship: usuarios_usuarios2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">usuarios (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_vendas"></A>
+<div class="objectname">Relationship: usuarios_vendas</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendas (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_vendas2"></A>
+<div class="objectname">Relationship: usuarios_vendas2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendas (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_vendedores"></A>
+<div class="objectname">Relationship: usuarios_vendedores</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendedores (objid_logon_cadastro)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="usuarios_vendedores2"></A>
+<div class="objectname">Relationship: usuarios_vendedores2</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">usuarios (objid_usuario)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendedores (objid_logon_alteracao)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendas_cheques"></A>
+<div class="objectname">Relationship: vendas_cheques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendas (objid_venda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cheques (objid_venda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendas_comissoes"></A>
+<div class="objectname">Relationship: vendas_comissoes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendas (objid_venda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">comissoes (objid_venda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendas_itens_devolucao"></A>
+<div class="objectname">Relationship: vendas_itens_devolucao</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendas (objid_venda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_devolucao (objid_venda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendas_itens_venda"></A>
+<div class="objectname">Relationship: vendas_itens_venda</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendas (objid_venda)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">itens_venda (objid_venda)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendedores_blocos_pedidos"></A>
+<div class="objectname">Relationship: vendedores_blocos_pedidos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendedores (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">blocos_pedidos (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendedores_cheques"></A>
+<div class="objectname">Relationship: vendedores_cheques</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendedores (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cheques (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendedores_cidades_atuacao"></A>
+<div class="objectname">Relationship: vendedores_cidades_atuacao</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendedores (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">cidades_atuacao (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendedores_clientes"></A>
+<div class="objectname">Relationship: vendedores_clientes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">One Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendedores (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">clientes (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendedores_comissoes"></A>
+<div class="objectname">Relationship: vendedores_comissoes</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendedores (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">comissoes (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendedores_contatos"></A>
+<div class="objectname">Relationship: vendedores_contatos</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendedores (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">contatos (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+<A NAME="vendedores_vendas"></A>
+<div class="objectname">Relationship: vendedores_vendas</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">vendedores (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">vendas (objid_vendedor)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">Cascade</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
